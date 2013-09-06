@@ -117,6 +117,24 @@ public class Downloaders {
     return 0;
   }
 
+  public double getVirtexPrice() {
+    try {
+      URL url = new URL("https://www.cavirtex.com/api/CAD/ticker.json");
+      String json = downloadReq(url);
+      if (json == null) return 0;
+      try {
+        JSONObject j = new JSONObject(json);
+        double price = j.getDouble("last");
+        return price;
+      } catch (JSONException e) {
+        toastLong("jsonException parsing: " + json);
+      }
+    } catch (MalformedURLException e) {
+      assert false;
+    }
+    return 0;
+  }
+
   public double getMtgoxPrice() {
     try {
       URL url = new URL("https://data.mtgox.com/api/1/BTCUSD/ticker");
@@ -179,17 +197,11 @@ public class Downloaders {
   // all prices @ cryptsy are currently in BTC
   public double getCryptsyPrice(String coin) {
     try {
-      URL url = new URL("http://pubapi.cryptsy.com/api.php?method=marketdata");
-      String json = downloadReq(url);
-      if (json == null) return 0;
-      try {
-        JSONObject j = new JSONObject(json);
-        JSONObject r = j.getJSONObject("return").getJSONObject("markets").getJSONObject(coin);
-        double last = r.getDouble("lasttradeprice");
-        return last;
-      } catch (JSONException e) {
-        toastLong("jsonException parsing: " + json);
-      }
+      URL url = new URL("http://cryptsy.phauna.org/getLast.php?ticker=" + coin);
+      String s = downloadReq(url);
+      if (s == null) return 0;
+      double last = Double.parseDouble(s);
+      return last;
     } catch (MalformedURLException e) {
       assert false;
     }

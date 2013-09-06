@@ -10,6 +10,7 @@ public class C {
   public static final String EXCH_BSTP = "exch_bstp";
   public static final String EXCH_CPBX = "exch_cpbx";
   public static final String EXCH_CBSE = "exch_cbse";
+  public static final String EXCH_VRTX = "exch_vrtx";
 
   public static int exchangeCoins(String exchange) {
     if (   exchange.equals(EXCH_VREX)) {
@@ -18,7 +19,7 @@ public class C {
       return R.array.array_btce_coins;
     } else if (exchange.equals(EXCH_CRSY)) {
       return R.array.array_crsy_coins;
-    } else if (exchange.equals(EXCH_MGOX) || exchange.equals(EXCH_CPBX) || exchange.equals(EXCH_BSTP) || exchange.equals(EXCH_CBSE)) {
+    } else if (exchange.equals(EXCH_MGOX) || exchange.equals(EXCH_CPBX) || exchange.equals(EXCH_BSTP) || exchange.equals(EXCH_CBSE) || exchange.equals(EXCH_VRTX)) {
       return R.array.array_mgox_coins;
     } else {
       return -1;
@@ -54,6 +55,8 @@ public class C {
       return "cmpBX";
     } else if (exchange.equals(EXCH_CBSE)) {
       return "C'bse";
+    } else if (exchange.equals(EXCH_VRTX)) {
+      return "V'tex";
     } else {
       return "???";
     }
@@ -79,6 +82,7 @@ public class C {
   public static final String EUR = "EUR";
   public static final String GBP = "GBP";
   public static final String JPY = "JPY";
+  public static final String CAD = "CAD";
 
   public static final int DEFAULT_COLOR_TEXT = 0xffC9C9C9;
   public static final int DEFAULT_COLOR_BG = 0xbb494949;
