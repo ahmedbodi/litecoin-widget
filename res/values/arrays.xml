@@ -8,7 +8,7 @@
   <item>Bitstamp</item>
   <item>Campbx</item>
   <item>Coinbase</item>
-  <item>Virtex</item>
+  <item>CaVirtex</item>
  </string-array>
  <string-array name="array_exchange_values">
   <item>exch_crsy</item>

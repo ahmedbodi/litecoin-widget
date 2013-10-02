@@ -56,7 +56,7 @@ public class C {
     } else if (exchange.equals(EXCH_CBSE)) {
       return "C'bse";
     } else if (exchange.equals(EXCH_VRTX)) {
-      return "V'tex";
+      return "CaVtx";
     } else {
       return "???";
     }
