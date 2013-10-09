@@ -31,6 +31,7 @@ public class C {
   public static final String CFG_VREX_NMC = "vircurex_nmc";
   public static final String CFG_VREX_PPC = "vircurex_ppc";
   public static final String CFG_VREX_TRC = "vircurex_trc";
+  public static final String CFG_VREX_DGC = "vircurex_dgc";
   public static final String CFG_MGOX_BTC = "mgox_btc";
   public static final String CFG_BTCE_LTC = "btce_ltc";
   public static final String CFG_BTCE_BTC = "btce_btc";
