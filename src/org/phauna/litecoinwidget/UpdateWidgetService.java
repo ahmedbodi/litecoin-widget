@@ -244,6 +244,8 @@ public class UpdateWidgetService extends Service {
         picId = R.drawable.novacoin;
       } else if (coin.equals("DVC")) {
         picId = R.drawable.devcoin;
+      } else if (coin.equals("DGC")) {
+        picId = R.drawable.digitalcoin;
       }
       remoteViews.setImageViewResource(R.id.widgetpic, picId);
       double btcDouble = result.getPriceBTC();
