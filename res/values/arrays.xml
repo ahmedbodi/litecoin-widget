@@ -28,6 +28,7 @@
   <item>TRC</item>
   <item>FTC</item>
   <item>FRC</item>
+  <item>DGC</item>
  </string-array>
 
  <string-array name="array_crsy_coins">
@@ -38,6 +39,7 @@
   <item>TRC</item>
   <item>FTC</item>
   <item>FRC</item>
+  <item>DGC</item>
  </string-array>
 
  <string-array name="array_mgox_coins">
